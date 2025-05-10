@@ -1,0 +1,11 @@
+
+name: Firstworkflow
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      -name: greeting
+      run: echo " firstcode!"
+      
+    
