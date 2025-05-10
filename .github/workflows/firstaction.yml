@@ -2,10 +2,14 @@
 name: Firstworkflow
 on: workflow_dispatch
 jobs:
-  first-job:
+  Run-npm-on-Ubuntu:
+    name: Run npm on Ubuntu
     runs-on: ubuntu-latest
     steps:
-      -name: greeting
-      run: echo " firstcode!"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '14'
+      - run: npm help
       
     
